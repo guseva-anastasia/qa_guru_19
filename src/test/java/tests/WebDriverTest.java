@@ -16,7 +16,7 @@ public class WebDriverTest {
         assertThat(config.getBrowser()).isEqualTo("CHROME");
         assertThat(config.getRemote()).isEqualTo(true);
         assertThat(config.getBaseUrl()).isEqualTo("https://github.com");
-        assertThat(config.getVersion()).isEqualTo("125.0");
+        assertThat(config.getVersion()).isEqualTo("127");
         assertThat(config.getBrowserSize()).isEqualTo("1920x1080");
         assertThat(config.getRemoteURL()).isEqualTo("https://user1:1234@selenoid.autotests.cloud/wd/hub");
     }
@@ -30,7 +30,7 @@ public class WebDriverTest {
         assertThat(config.getBrowser()).isEqualTo("CHROME");
         assertThat(config.getRemote()).isEqualTo(false);
         assertThat(config.getBaseUrl()).isEqualTo("https://github.com");
-        assertThat(config.getVersion()).isEqualTo("125.0");
+        assertThat(config.getVersion()).isEqualTo("127");
         assertThat(config.getBrowserSize()).isEqualTo("1920x1080");
     }
 
