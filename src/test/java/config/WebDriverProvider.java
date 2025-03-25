@@ -7,8 +7,8 @@ public class WebDriverProvider {
 
     private final WebDriverConfig config;
 
-    public WebDriverProvider() {
-        this.config = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
+    public WebDriverProvider(WebDriverConfig config) {
+        this.config = config;
     }
 
     public void setConfig(){
