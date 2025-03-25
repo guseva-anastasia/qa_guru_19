@@ -12,14 +12,13 @@ public class WebDriverProvider {
     }
 
     public void setConfig(){
-        Configuration.pageLoadStrategy = "eager";
-        Configuration.timeout = 7000;
-
-        Configuration.browser = String.valueOf(config.getBrowser());
-        Configuration.browserVersion = config.getVersion();
-        Configuration.browserSize = config.getBrowserSize();
-        Configuration.remote = config.getRemoteURL();
         Configuration.baseUrl = config.getBaseUrl();
+        Configuration.browser = config.getBrowser();
+        Configuration.browserSize = config.getBrowserSize();
+        Configuration.browserVersion = config.getVersion();
+        if (config.getRemote()) {
+            Configuration.remote = config.getRemoteURL();
+        }
 
 
     }
