@@ -3,33 +3,30 @@ package config;
 import org.aeonbits.owner.Config;
 
 @Config.Sources({
-        "classpath:environment.properties"
+        "classpath:${env}.properties"
 })
 public interface WebDriverConfig extends Config {
 
-    @DefaultValue("local")
-    String env();
-
-    @Key("${env}.baseUrl")
+    @Key("baseUrl")
     @DefaultValue("https://github.com")
     String getBaseUrl();
 
-    @Key("${env}.browser")
+    @Key("browser")
     @DefaultValue("CHROME")
     String getBrowser();
 
-    @Key("${env}.version")
-    @DefaultValue("125")
+    @Key("version")
+    @DefaultValue("127")
     String getVersion();
 
-    @Key("${env}.remoteUrl")
+    @Key("remoteUrl")
     String getRemoteURL();
 
-    @Key("${env}.remote")
+    @Key("remote")
     @DefaultValue("false")
     Boolean getRemote();
 
-    @Key("${env}.browserSize")
+    @Key("browserSize")
     @DefaultValue("1920x1080")
     String getBrowserSize();
 
